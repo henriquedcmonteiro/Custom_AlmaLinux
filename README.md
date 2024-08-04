@@ -4,11 +4,33 @@ Instalação automatizada de um Alma Linux com Openbox para hardwares simples.
 #Objetivo do sistema
 O objetivo desse sistema é ser muito leve e friendly para usuários finais, podendo ser adaptado para utilizar varios programas mantendo a eficiencia e leveza. 
 
-Este sistema possui três arquivos responsáveis pela sua instalação automatizada:
+![image](https://github.com/user-attachments/assets/9368f88a-2364-4337-845a-b81d4c44aa5f)
+
+![image](https://github.com/user-attachments/assets/3463413a-822e-4df2-ac25-e368e6ee83a7)
+
+![image](https://github.com/user-attachments/assets/c3292abc-c1f9-4799-b1d7-a05ae03faea3)
+
+
+Este sistema possui arquivos responsáveis pela sua instalação automatizada:
 
  1. Isolinux: Inicia a instalação a partir do boot EFI.
- 2. Kickstart (ks script): Automatiza a configuração básica do sistema.
+ 2. Pasta custom que fica na raiz da iso onde esta os arquivos de configuração
  3. Shell script: Executado com chroot para customizações adicionais.
+ 4. Kickstart (ks script): Automatiza a configuração básica do sistema.
+
+Para utilizar esta instalação basta pegar uma iso minima do alma linux e colocar os arquivos modificados, a raiz da iso ficara desta forma.
+
+![image](https://github.com/user-attachments/assets/7849617b-5f3c-4e4d-934d-7a4ef8a52c06)
+
+O arquivo isolinux.cfg é onde você aponta o seu boot para o arquivo de automatização de instalação ks.script que vai estar encontrado na raiz da iso. O arquivo isolinux.cfg vai estar na raiz_da_iso/isolinux.
+
+Você pode modificar a sua maneira e com suas tags, nesta iso esta desta forma para apontar o ks.script.
+
+![image](https://github.com/user-attachments/assets/cca434ad-06e5-42dc-8fa8-39d4ad71aaee)
+
+Os arquivos que tem boa parte das customizações da interface e do sistema estão localizados na pasta custom.
+
+![image](https://github.com/user-attachments/assets/a2d3fa9f-a7e2-479b-8de4-10e182464faf)
 
 Vamos começar explanando o Kickstart script e suas funcionalidades.
 
