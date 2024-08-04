@@ -1,6 +1,9 @@
 # Alma Linux automatizado com Openbox
 Instalação automatizada de um Alma Linux com Openbox para hardwares simples.
 
+#Objetivo do sistema
+O objetivo desse sistema é ser muito leve e friendly para usuários finais, podendo ser adaptado para utilizar varios programas mantendo a eficiencia e leveza. 
+
 Este sistema possui três arquivos responsáveis pela sua instalação automatizada:
 
  1. Isolinux: Inicia a instalação a partir do boot EFI.
@@ -444,4 +447,18 @@ Por último, desativamos o modo de depuração e registramos uma mensagem de suc
     echo "Script de pós-instalação executado com sucesso em $(date)" >> /var/log/post_install.log
     
     set +x
+
+#Arquivos de configuração da Interface
+
+As bibliotecas e executaveis se conversam para formar este sistema com interface, o jgmenu pode ser configurado através do ~/.config/openbox/menu.xml
+
+As bordas das janelas e o tamanho das fontes dela podem ser alterados com o comando obconf-qt, podendo selecionar varios layouts e customiza-los.
+
+O tint2conf pode ser evocado para mexer no painel, acrescentar o system tray, hora e novas opções que vão ficar na barra de pesquisa da tela principal.
+
+O lxterminalconf pode ser configurado ~/.config/lxterminal/lxterminal.conf
+
+O jgmenu também tem varias opções podendo ser evocado através do jgmenu_run init -i
+
+
     
